@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-image = Image.open('images/banner.jpg')
+image = Image.open('banner.jpg')
 
 st.image(image)
 
