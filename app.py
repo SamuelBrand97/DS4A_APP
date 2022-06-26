@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
+
+#TEST
 image = Image.open('banner.jpg')
 
 st.image(image)
