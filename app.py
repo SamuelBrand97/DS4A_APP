@@ -18,5 +18,11 @@ data2 = st.sidebar.file_uploader('Upload the validation data')
 
 if data1 and data2:
     df = pd.read_csv(data1, encoding = 'latin-1', skiprows = 1)
+    df =df.replace('NaN',' ')
+    df['FULL_NAME'] = df['NOM1_VAL'] + ' ' + df['NOM2_VAL'] + ' ' + df['APE1_VAL'] + ' ' + df['APE2_VAL']
+
+
+    df1 = pd.read_csv(data2, encoding = 'latin-1', skiprows = 1)
+    
     st.header('Data Header')
-    st.write(df.head(10))
+    st.write(df.head(50))
